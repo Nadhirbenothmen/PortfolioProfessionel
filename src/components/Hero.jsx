@@ -28,7 +28,7 @@ const Hero = () => {
         className="absolute right-0 top-0 h-full w-1/2 hidden md:flex md:items-center md:justify-center pt-16 px-4"
       >
         <img 
-          src="/src/assets/BG.png" 
+          src="/assets/BG.png" 
           alt="Nadhir Ben Othmen" 
           className="w-auto h-full object-contain"
         />

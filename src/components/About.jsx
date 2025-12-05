@@ -33,7 +33,7 @@ const About = () => {
             <div className="relative">
               <div className="relative w-80 h-80 rounded-full overflow-hidden border-4 border-gray-700 dark:border-gray-600 shadow-2xl">
                 <img 
-                  src="src/assets/profile-pic.png" 
+                  src="/assets/profile-pic.png" 
                   alt="Profile" 
                   className="w-full h-full object-cover"
                 />
