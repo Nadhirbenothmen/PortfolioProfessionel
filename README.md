@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Personal Portfolio Website
 
 A clean and responsive personal portfolio website built with React, React Router, Tailwind CSS, and Framer Motion.
@@ -147,3 +148,6 @@ Contributions, issues, and feature requests are welcome!
 ---
 
 ⭐ Don't forget to star this repo if you found it helpful!
+=======
+# PortfolioProfessionel
+>>>>>>> c7794cda712cba6d1aaff322215b6f1ac6ee03c7
