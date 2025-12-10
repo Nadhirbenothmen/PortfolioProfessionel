@@ -130,18 +130,16 @@ const About = () => {
                 Nadhir BEN OTHMEN
               </h3>
               <p className="text-base font-medium text-gray-600 dark:text-gray-300 mb-3 leading-relaxed">
-                ERP & BI Engineer / Data & AI and Full-Stack Developer
+                Computer Science Engineer - Business Intelligence & Data Engineering 
               </p>
             </div>
 
             <p className="text-lg text-gray-700 dark:text-white leading-relaxed font-normal">
-              Diplômé récent en ingénierie informatique de l'ESPRIT, passionné par la Business Intelligence et l'Intelligence Artificielle. J'aime concevoir des solutions innovantes qui allient performance technique et valeur business.
-            </p>
+              A recent graduate in computer engineering from ESPRIT, I am passionate about Business Intelligence and Artificial Intelligence. I enjoy designing innovative solutions that combine technical performance with business value.            </p>
             <p className="text-lg text-gray-700 dark:text-white leading-relaxed font-normal">
-              Au cours de mon parcours, j'ai mené plusieurs projets concrets chez ONRTECH, BID Consulting et SkyWare, couvrant la modélisation prédictive, la visualisation BI et l'automatisation intelligente. Ces expériences m'ont permis de connecter les données à la prise de décision.
-            </p>
+              Throughout my career, I have led several concrete projects at ONRTECH, BID Consulting, and SkyWare, covering predictive modeling, BI visualization, and intelligent automation. These experiences have allowed me to connect data to decision-making.            </p>
             <p className="text-lg text-gray-700 dark:text-white leading-relaxed font-normal">
-              Mon expertise couvre toute la chaîne de valeur des données : de l'ETL et la modélisation jusqu'à la création de tableaux de bord analytiques et de modèles IA déployés dans des environnements cloud. Je m'engage à concevoir des applications data-driven performantes et scalables.
+              My expertise covers the entire data value chain: from ETL and modeling to creating analytical dashboards and AI models deployed in cloud environments. I am committed to designing high-performance, scalable data-driven applications.
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
               <motion.span 

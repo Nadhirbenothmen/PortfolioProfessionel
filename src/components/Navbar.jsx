@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope, FaMoon, FaSun } from 'react-icons/fa'
+import { FaBars, FaTimes, FaHome, FaUser, FaCode, FaProjectDiagram, FaEnvelope, FaMoon, FaSun, FaGraduationCap, FaCertificate } from 'react-icons/fa'
 import { useTheme } from '../context/ThemeContext'
 import Logo from './Logo'
 
@@ -18,8 +18,10 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/', scroll: 'hero', icon: FaHome },
     { name: 'About', path: '/', scroll: 'about', icon: FaUser },
+    { name: 'Education', path: '/', scroll: 'education', icon: FaGraduationCap },
     { name: 'Skills', path: '/', scroll: 'skills', icon: FaCode },
     { name: 'Projects', path: '/', scroll: 'projects', icon: FaProjectDiagram },
+    { name: 'Certifications', path: '/', scroll: 'certifications', icon: FaCertificate },
     { name: 'Contact', path: '/', scroll: 'contact', icon: FaEnvelope },
   ]
 
@@ -32,7 +34,7 @@ const Navbar = () => {
       // Ne pas mettre à jour activeSection si on n'est pas sur la page d'accueil
       if (location.pathname !== '/') return
 
-      const sections = ['hero', 'about', 'skills', 'projects', 'contact']
+      const sections = ['hero', 'about', 'education', 'skills', 'projects', 'certifications', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
