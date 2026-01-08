@@ -10,13 +10,67 @@ import {
 import { 
   SiTensorflow, SiMongodb, SiPostgresql, 
   SiExpress, SiDjango, SiJupyter, SiMysql,
-  SiOracle, SiSpringboot, SiDotnet, SiTypescript, SiTailwindcss, SiScikitlearn, SiPytorch, SiPandas, SiNumpy, SiTalend, SiSap
+  SiOracle, SiSpringboot, SiDotnet, SiTypescript, SiTailwindcss, SiScikitlearn, SiPytorch, SiPandas, SiNumpy, SiTalend, SiSap,
+  SiSonarqube
 } from 'react-icons/si'
+import { DiJenkins } from 'react-icons/di';
 
 const Skills = () => {
-  const [activeFilter, setActiveFilter] = useState('All')
+  const [activeFilter, setActiveFilter] = useState('Business Intelligence')
   
   const skillCategories = [
+    {
+      title: 'Business Intelligence',
+      color: 'from-yellow-500 to-yellow-600',
+      icon: '📊',
+      skills: [
+        { name: 'Power BI', icon: FaChartLine, level: 95, color: '#F2C811' },
+        { name: 'Talend', icon: SiTalend, level: 90, color: '#16B4E5' },
+        { name: 'ETL / ELT', icon: FaCogs, level: 95, color: '#9B59B6' },
+        { name: 'Data Modeling', icon: FaDatabase, level: 95, color: '#E74C3C' },
+        { name: 'Reporting', icon: FaFileAlt, level: 90, color: '#27AE60' },
+        { name: 'KPI Dashboards', icon: FaTachometerAlt, level: 95, color: '#E91E63' },
+        { name: 'SSIS/SSAS', icon: FaMicrosoft, level: 90, color: '#CC2927' },
+        { name: 'SAP', icon: SiSap, level: 65, color: '#0FAAFF' },
+      ]
+    },
+    {
+      title: 'Data Science',
+      color: 'from-pink-500 to-pink-600',
+      icon: '📊',
+      skills: [
+        { name: 'Pandas', icon: SiPandas, level: 95, color: '#150458' },
+        { name: 'NumPy', icon: SiNumpy, level: 90, color: '#4DABCF' },
+        { name: 'Jupyter', icon: SiJupyter, level: 80, color: '#F37626' },
+        { name: 'Matplotlib / Seaborn', icon: FaChartBar, level: 85, color: '#11557C' },
+      ]
+    },
+    {
+      title: 'Artificial Intelligence',
+      color: 'from-purple-500 to-purple-600',
+      icon: '🤖',
+      skills: [
+        { name: 'TensorFlow', icon: SiTensorflow, level: 80, color: '#FF6F00' },
+        { name: 'PyTorch', icon: SiPytorch, level: 80, color: '#EE4C2C' },
+        { name: 'Scikit-learn', icon: SiScikitlearn, level: 80, color: '#F7931E' },
+        { name: 'Machine Learning', icon: FaBrain, level: 85, color: '#FF6B9D' },
+        { name: 'Predictive Modeling', icon: FaChartLine, level: 85, color: '#4ECDC4' },
+        { name: 'Feature Engineering', icon: FaCogs, level: 85, color: '#95E1D3' },
+        { name: 'Time Series Forecasting', icon: FaClock, level: 80, color: '#C7CEEA' },
+      ]
+    },
+    {
+      title: 'Databases',
+      color: 'from-orange-500 to-orange-600',
+      icon: '🗄️',
+      skills: [
+        { name: 'PostgreSQL', icon: SiPostgresql, level: 90, color: '#4169E1' },
+        { name: 'MySQL', icon: SiMysql, level: 90, color: '#4479A1' },
+        { name: 'SQL Server', icon: FaMicrosoft, level: 85, color: '#CC2927' },
+        { name: 'MongoDB', icon: SiMongodb, level: 90, color: '#47A248' },
+        { name: 'Oracle', icon: SiOracle, level: 80, color: '#F80000' },
+      ]
+    },
     {
       title: 'Frontend Development',
       color: 'from-blue-500 to-blue-600',
@@ -38,34 +92,8 @@ const Skills = () => {
         { name: 'Python', icon: FaPython, level: 90, color: '#3776AB' },
         {name : 'Java', icon: FaJava, level: 80, color: '#007396' },
         { name: '.Net Core', icon: SiDotnet, level: 80, color: '#512BD4' },
-        { name: 'Django', icon: SiDjango, level: 60, color: '#092E20' },
         { name: 'Express.js', icon: SiExpress, level: 60, color: '#ebee52ff' },
         
-      ]
-    },
-    {
-      title: 'Artificial Intelligence',
-      color: 'from-purple-500 to-purple-600',
-      icon: '🤖',
-      skills: [
-        { name: 'TensorFlow', icon: SiTensorflow, level: 90, color: '#FF6F00' },
-        { name: 'PyTorch', icon: SiPytorch, level: 85, color: '#EE4C2C' },
-        { name: 'Scikit-learn', icon: SiScikitlearn, level: 90, color: '#F7931E' },
-        { name: 'Machine Learning', icon: FaBrain, level: 90, color: '#FF6B9D' },
-        { name: 'Predictive Modeling', icon: FaChartLine, level: 87, color: '#4ECDC4' },
-        { name: 'Feature Engineering', icon: FaCogs, level: 85, color: '#95E1D3' },
-        { name: 'Time Series Forecasting', icon: FaClock, level: 80, color: '#C7CEEA' },
-      ]
-    },
-    {
-      title: 'Data Science',
-      color: 'from-pink-500 to-pink-600',
-      icon: '📊',
-      skills: [
-        { name: 'Pandas', icon: SiPandas, level: 95, color: '#150458' },
-        { name: 'NumPy', icon: SiNumpy, level: 90, color: '#4DABCF' },
-        { name: 'Jupyter', icon: SiJupyter, level: 95, color: '#F37626' },
-        { name: 'Matplotlib / Seaborn', icon: FaChartBar, level: 85, color: '#11557C' },
       ]
     },
     {
@@ -76,34 +104,9 @@ const Skills = () => {
         { name: 'Docker', icon: FaDocker, level: 90, color: '#2496ED' },
         { name: 'Git / GitHub', icon: FaGithub, level: 95, color: '#F05032' },
         { name: 'Linux', icon: FaLinux, level: 85, color: '#FCC624' },
-        { name: 'CI/CD', icon: FaCogs, level: 85, color: '#5B9BD5' },
-      ]
-    },
-    {
-      title: 'Business Intelligence',
-      color: 'from-yellow-500 to-yellow-600',
-      icon: '📊',
-      skills: [
-        { name: 'Power BI', icon: FaChartLine, level: 95, color: '#F2C811' },
-        { name: 'Talend', icon: SiTalend, level: 92, color: '#16B4E5' },
-        { name: 'ETL / ELT', icon: FaCogs, level: 95, color: '#9B59B6' },
-        { name: 'Data Modeling', icon: FaDatabase, level: 95, color: '#E74C3C' },
-        { name: 'Reporting', icon: FaFileAlt, level: 90, color: '#27AE60' },
-        { name: 'KPI Dashboards', icon: FaTachometerAlt, level: 98, color: '#E91E63' },
-        { name: 'SSIS/SSAS', icon: FaMicrosoft, level: 90, color: '#CC2927' },
-        { name: 'SAP', icon: SiSap, level: 65, color: '#0FAAFF' },
-      ]
-    },
-    {
-      title: 'Databases',
-      color: 'from-orange-500 to-orange-600',
-      icon: '🗄️',
-      skills: [
-        { name: 'PostgreSQL', icon: SiPostgresql, level: 90, color: '#4169E1' },
-        { name: 'MySQL', icon: SiMysql, level: 85, color: '#4479A1' },
-        { name: 'SQL Server', icon: FaMicrosoft, level: 87, color: '#CC2927' },
-        { name: 'MongoDB', icon: SiMongodb, level: 75, color: '#47A248' },
-        { name: 'Oracle', icon: SiOracle, level: 80, color: '#F80000' },
+        { name: 'CI/CD', icon: FaCogs, level: 70, color: '#5B9BD5' },
+        { name: 'Jenkins', icon: DiJenkins, level: 70, color: '#D24939' },
+        { name: 'SonarQube', icon: SiSonarqube, level: 70, color: '#4E9BCD' },
       ]
     },
     /* {
@@ -142,21 +145,6 @@ const Skills = () => {
           viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
-          {/* All Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setActiveFilter('All')}
-            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 ${
-              activeFilter === 'All'
-                ? 'bg-gray-700 dark:bg-gray-800 text-white border-2 border-blue-500 shadow-lg shadow-blue-500/50'
-                : 'bg-gray-700 dark:bg-gray-800 text-gray-300 border-2 border-gray-600 dark:border-gray-700 hover:border-gray-500'
-            }`}
-          >
-            <span className="text-xl">💼</span>
-            <span>All Skills</span>
-          </motion.button>
-          
           {skillCategories.map((category) => (
             <motion.button
               key={category.title}
@@ -178,7 +166,7 @@ const Skills = () => {
         {/* Selected Category Skills */}
         <div className="space-y-8">
           {skillCategories.map((category) => (
-            (activeFilter === 'All' || activeFilter === category.title) && (
+            (activeFilter === category.title) && (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, scale: 0.9 }}
