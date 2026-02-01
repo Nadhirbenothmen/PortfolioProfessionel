@@ -1,7 +1,31 @@
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaChevronDown } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaChevronDown, FaPython, FaDatabase, FaDocker, FaReact, FaAngular, FaChartBar, FaJava, FaBrain, FaChartLine, FaTable, FaChartPie, FaServer, FaChartArea, FaMicrosoft } from 'react-icons/fa'
+import { SiTensorflow, SiMongodb, SiPostgresql, SiPytorch, SiTalend, SiMysql, SiOracle, SiTableau } from 'react-icons/si'
 
 const Hero = () => {
+  // Floating icons data
+  const floatingIcons = [
+    { Icon: FaPython, color: '#3776AB', size: 40, delay: 0, duration: 20, x: '10%', y: '15%' },
+    { Icon: SiTensorflow, color: '#FF6F00', size: 35, delay: 2, duration: 25, x: '85%', y: '20%' },
+    { Icon: FaReact, color: '#61DAFB', size: 38, delay: 1, duration: 22, x: '15%', y: '70%' },
+    { Icon: SiMongodb, color: '#47A248', size: 36, delay: 3, duration: 24, x: '90%', y: '60%' },
+    { Icon: FaDatabase, color: '#4169E1', size: 34, delay: 4, duration: 23, x: '8%', y: '45%' },
+    { Icon: FaChartLine, color: '#F2C811', size: 40, delay: 1.5, duration: 21, x: '92%', y: '85%' },
+    { Icon: FaDocker, color: '#2496ED', size: 37, delay: 2.5, duration: 26, x: '12%', y: '88%' },
+    { Icon: FaAngular, color: '#DD0031', size: 35, delay: 3.5, duration: 24, x: '88%', y: '40%' },
+    { Icon: FaBrain, color: '#FF6B9D', size: 36, delay: 0.5, duration: 22, x: '5%', y: '30%' },
+    { Icon: SiPytorch, color: '#EE4C2C', size: 34, delay: 4.5, duration: 25, x: '95%', y: '75%' },
+    { Icon: FaChartBar, color: '#27AE60', size: 33, delay: 1.8, duration: 23, x: '7%', y: '60%' },
+    { Icon: SiTalend, color: '#16B4E5', size: 35, delay: 3.2, duration: 24, x: '93%', y: '30%' },
+    { Icon: SiPostgresql, color: '#4169E1', size: 38, delay: 2.8, duration: 22, x: '18%', y: '25%' },
+    { Icon: SiMysql, color: '#4479A1', size: 36, delay: 1.2, duration: 24, x: '82%', y: '55%' },
+    { Icon: FaTable, color: '#34A853', size: 34, delay: 3.8, duration: 23, x: '14%', y: '50%' },
+    { Icon: FaChartPie, color: '#EA4335', size: 35, delay: 0.8, duration: 21, x: '88%', y: '70%' },
+    { Icon: FaMicrosoft, color: '#CC2927', size: 37, delay: 4.2, duration: 25, x: '6%', y: '75%' },
+    { Icon: FaServer, color: '#0078D4', size: 33, delay: 2.2, duration: 22, x: '94%', y: '50%' },
+    { Icon: FaChartArea, color: '#FBBC04', size: 35, delay: 1.6, duration: 24, x: '10%', y: '82%' },
+    { Icon: SiTableau, color: '#E97627', size: 36, delay: 3.6, duration: 23, x: '90%', y: '15%' },
+  ]
   const subtitles = [
     'Building Scalable Solutions',
     'Data-Driven Insights',
@@ -18,6 +42,35 @@ const Hero = () => {
           <div className="absolute top-40 right-10 w-72 h-72 bg-accent rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl animate-blob animation-delay-2000"></div>
           <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl animate-blob animation-delay-4000"></div>
         </div>
+      </div>
+
+      {/* Floating Skills Icons */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {floatingIcons.map((item, index) => (
+          <motion.div
+            key={index}
+            className="absolute opacity-60 hover:opacity-90 transition-opacity duration-300"
+            style={{
+              left: item.x,
+              top: item.y,
+              color: item.color,
+              filter: 'drop-shadow(0 0 15px currentColor) drop-shadow(0 0 30px currentColor)',
+            }}
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 15, 0],
+              rotate: [0, 360],
+            }}
+            transition={{
+              duration: item.duration,
+              delay: item.delay,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            <item.Icon size={item.size} />
+          </motion.div>
+        ))}
       </div>
 
       {/* Profile Image - Right Side */}
@@ -67,7 +120,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-sm md:text-base text-gray-300 mb-8 max-w-xl leading-relaxed"
           >
-          Passionate about data, artificial intelligence and digital innovation </motion.p>
+            Transforming data into actionable insights through Business Intelligence and AI/ML. I deliver innovative solutions that bridge technical excellence with strategic business value.
+          </motion.p>
 
           {/* Social Links */}
           <motion.div
@@ -125,22 +179,13 @@ const Hero = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/Cv-Ben-Othmen-Nadhir.pdf"
+              href="Nadhir-BENOTHMEN-CV.pdf"
               download="Nadhir_Ben_Othmen_CV.pdf"
               className="px-8 py-3 bg-green-500 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300 flex items-center gap-2"
             >
               <FaDownload size={18} />
               Download CV
             </motion.a>
-            
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-white text-gray-800 rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-gray-100 transition-all duration-300"
-            >
-              Contact Me
-            </motion.button>
           </motion.div>
           </div>
       </div>

@@ -87,7 +87,16 @@ const Navbar = () => {
       <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo - Left */}
-          <Link to="/" className="hover:scale-105 transition-transform duration-300 flex-shrink-0">
+          <Link 
+            to="/" 
+            onClick={() => {
+              navigate('/')
+              setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }, 100)
+            }}
+            className="hover:scale-105 transition-transform duration-300 flex-shrink-0"
+          >
             <Logo className="w-40 h-12" />
           </Link>
 
