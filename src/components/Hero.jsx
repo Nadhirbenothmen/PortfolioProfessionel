@@ -4,7 +4,12 @@ import { SiTensorflow, SiMongodb, SiPostgresql, SiPytorch, SiTalend, SiMysql, Si
 import { useTranslation } from 'react-i18next'
 
 const Hero = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  
+  // Get CV path based on current language
+  const cvPath = i18n.language === 'fr' ? '/Nadhir-BENOTHMEN-CV-FR.pdf' : '/Nadhir-BENOTHMEN-CV-EN.pdf'
+  const cvFileName = i18n.language === 'fr' ? 'Nadhir_BEN_OTHMEN_CV-FR.pdf' : 'Nadhir_BEN_OTHMEN_CV-EN.pdf'
+  
   // Floating icons data
   const floatingIcons = [
     { Icon: FaPython, color: '#3776AB', size: 40, delay: 0, duration: 20, x: '10%', y: '15%' },
@@ -181,8 +186,8 @@ const Hero = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="Nadhir-BENOTHMEN-CV.pdf"
-              download="Nadhir_Ben_Othmen_CV.pdf"
+              href={cvPath}
+              download={cvFileName}
               className="px-8 py-3 bg-green-500 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300 flex items-center gap-2"
             >
               <FaDownload size={18} />
