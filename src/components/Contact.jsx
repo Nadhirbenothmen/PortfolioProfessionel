@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 import emailjs from '@emailjs/browser'
 
 const Contact = () => {
+  const { t } = useTranslation()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,12 +41,12 @@ const Contact = () => {
     emailjs.send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text)
-        alert('✅ Message envoyé avec succès! Je vous répondrai bientôt.')
+        alert(t('contact.success'))
         setFormData({ name: '', email: '', subject: '', message: '' })
       })
       .catch((error) => {
         console.error('FAILED...', error)
-        alert('❌ Erreur lors de l\'envoi. Veuillez réessayer ou me contacter directement à nadhirbenothmen12@gmail.com')
+        alert(t('contact.error'))
       })
       .finally(() => {
         setIsSending(false)
@@ -61,13 +63,13 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Let's Connect</span>
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t('contact.subtitle')}</span>
           <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-4 mt-2">
-            Get In Touch
+            {t('contact.title')}
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
           <p className="text-gray-600 dark:text-gray-300 mt-4 text-lg">
-            Have a project in mind? Let's work together!
+            {t('contact.description')}
           </p>
         </motion.div>
 
@@ -82,7 +84,7 @@ const Contact = () => {
           >
             <div>
               <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Contact Information
+                {t('contact.contactInfo')}
               </h3>
               <div className="space-y-6">
                 <motion.div 
@@ -93,7 +95,7 @@ const Contact = () => {
                     <FaEnvelope size={24} />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 font-semibold">Email</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 font-semibold">{t('contact.email')}</p>
                     <a href="mailto:your.email@example.com" className="text-gray-900 dark:text-white hover:text-primary transition-colors font-medium">
                       nadhirbenothmen12@gmail.com
                     </a>
@@ -107,7 +109,7 @@ const Contact = () => {
                     <FaPhone size={24} />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 font-semibold">Phone</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 font-semibold">{t('contact.phone')}</p>
                     <a href="tel:+1234567890" className="text-gray-900 dark:text-white hover:text-primary transition-colors font-medium">
                       +216 50 155 956
                     </a>
@@ -121,7 +123,7 @@ const Contact = () => {
                     <FaMapMarkerAlt size={24} />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 font-semibold">Location</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 font-semibold">{t('contact.location')}</p>
                     <p className="text-gray-900 dark:text-white font-medium">Tunisia, Bizerte</p>
                   </div>
                 </motion.div>
@@ -131,7 +133,7 @@ const Contact = () => {
             {/* Social Links */}
             <div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                Connect With Me
+                {t('contact.connectWithMe')}
               </h3>
               <div className="flex space-x-4">
                 <motion.a
@@ -178,7 +180,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
-                  Name
+                  {t('contact.name')}
                 </label>
                 <input
                   type="text"
@@ -188,12 +190,12 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                  placeholder="Your Name"
+                  placeholder={t('contact.namePlaceholder')}
                 />
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
-                  Email
+                  {t('contact.email')}
                 </label>
                 <input
                   type="email"
@@ -203,12 +205,12 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                  placeholder="your.email@example.com"
+                  placeholder={t('contact.emailPlaceholder')}
                 />
               </div>
               <div>
                 <label htmlFor="subject" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
-                  Subject
+                  {t('contact.subject')}
                 </label>
                 <input
                   type="text"
@@ -218,12 +220,12 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"
-                  placeholder="Project Inquiry"
+                  placeholder={t('contact.subjectPlaceholder')}
                 />
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">
-                  Message
+                  {t('contact.message')}
                 </label>
                 <textarea
                   id="message"
@@ -233,7 +235,7 @@ const Contact = () => {
                   required
                   rows="5"
                   className="w-full px-4 py-3 border-2 border-gray-200 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-xl focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder={t('contact.messagePlaceholder')}
                 />
               </div>
               <motion.button
@@ -246,7 +248,7 @@ const Contact = () => {
                 }`}
               >
                 <span className="flex items-center justify-center">
-                  {isSending ? 'Sending...' : 'Send Message'}
+                  {isSending ? t('contact.sending') : t('contact.send')}
                   {!isSending && (
                     <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />

@@ -1,7 +1,7 @@
 const education = [
   {
     id: 1,
-    degree: "Engineering Degree - ERP & Business Intelligence ",
+    degree: "Engineering Degree - ERP & Business Intelligence",
     institution: "ESPRIT - Private Higher School of Engineering and Technology",
     location: "Tunis, Tunisia",
     period: "2022 - 2025",

@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
 import { FaGraduationCap, FaUniversity, FaMapMarkerAlt, FaCalendarAlt, FaTrophy, FaBook } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 import education from '../data/education'
 
 const Education = () => {
+  const { t } = useTranslation()
   return (
     <section id="education" className="py-20 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,13 +15,13 @@ const Education = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Academic Background</span>
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t('education.subtitle')}</span>
           <h2 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-4 mt-2">
-            Education
+            {t('education.title')}
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
           <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-            Strong academic foundation in computer science, data engineering, and business intelligence
+            {t('education.description')}
           </p>
         </motion.div>
 
@@ -48,10 +50,10 @@ const Education = () => {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
                       <span className="inline-block px-4 py-1 bg-primary/20 text-primary text-xs font-bold rounded-full mb-3 uppercase tracking-wider">
-                        {index === 0 ? 'Engineer\'s Degree' : 'Bachelor\'s Degree'}
+                        {index === 0 ? t('education.engineerDegree') : t('education.bachelorDegree')}
                       </span>
                       <h3 className="text-2xl font-extrabold text-gray-900 dark:text-white mb-3 leading-tight group-hover:text-primary transition-colors">
-                        {edu.degree}
+                        {t(`education.degree${index + 1}`)}
                       </h3>
                     </div>
                   </div>
@@ -61,7 +63,7 @@ const Education = () => {
                       <div className="p-2 bg-white dark:bg-gray-700 rounded-lg">
                         <FaUniversity className="text-primary text-lg" />
                       </div>
-                      <span className="font-bold text-lg">{edu.institution}</span>
+                      <span className="font-bold text-lg">{t(`education.institution${index + 1}`)}</span>
                     </div>
                     
                     <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 ml-11">

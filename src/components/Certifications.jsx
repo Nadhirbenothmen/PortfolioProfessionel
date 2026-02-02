@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion'
 import { FaAward, FaCertificate, FaCheckCircle, FaExternalLinkAlt } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 import certifications from '../data/certifications'
 
 const Certifications = () => {
+  const { t } = useTranslation()
+  
   return (
     <section id="certifications" className="py-20 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,13 +16,13 @@ const Certifications = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Professional Credentials</span>
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t('certifications.subtitle')}</span>
           <h2 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-4 mt-2">
-            Certifications
+            {t('certifications.title')}
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
           <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-            Industry-recognized certifications validating my expertise in cloud computing, data engineering, and machine learning
+            {t('certifications.description')}
           </p>
         </motion.div>
 
@@ -62,7 +65,7 @@ const Certifications = () => {
               <div className="p-6">
                 <div className="flex items-start justify-between mb-3">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
-                    {cert.title}
+                    {t(`certifications.items.${cert.id}.title`)}
                   </h3>
                 </div>
 
@@ -74,13 +77,13 @@ const Certifications = () => {
                 </div>
 
                 <p className="text-gray-600 dark:text-gray-400 mb-4 line-clamp-3">
-                  {cert.description}
+                  {t(`certifications.items.${cert.id}.description`)}
                 </p>
 
                 {/* Credential ID */}
                 {cert.credentialId && (
                   <div className="mb-4 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                    <p className="text-xs text-gray-500 dark:text-gray-400">Credential ID</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">{t('certifications.credentialId')}</p>
                     <p className="text-sm font-mono text-gray-900 dark:text-white">{cert.credentialId}</p>
                   </div>
                 )}
@@ -92,7 +95,7 @@ const Certifications = () => {
                   rel="noopener noreferrer"
                   className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-lg hover:shadow-lg transition-all duration-300 group-hover:scale-105"
                 >
-                  <span className="font-semibold">View Certificate</span>
+                  <span className="font-semibold">{t('certifications.viewCertificate')}</span>
                   <FaExternalLinkAlt className="text-sm" />
                 </a>
               </div>

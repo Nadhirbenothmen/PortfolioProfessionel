@@ -1,0 +1,190 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "education": "Education",
+    "certifications": "Certifications",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello!",
+    "iAm": "I Am",
+    "name": "BEN OTHMEN Nadhir",
+    "title": "Business Intelligence & Data Engineer",
+    "description": "Transforming data into actionable insights through Business Intelligence and AI/ML. I deliver innovative solutions that bridge technical excellence with strategic business value.",
+    "viewProjects": "View Projects",
+    "downloadCV": "Download CV",
+    "scrollDown": "Scroll Down"
+  },
+  "about": {
+    "subtitle": "Get to know me",
+    "title": "About Me",
+    "badge1": "ERP & BI Engineer",
+    "badge2": "Data & IA Developer",
+    "stat1": "Years of experience",
+    "stat2": "Completed projects",
+    "stat3": "Internships & Freelances",
+    "name": "Nadhir BEN OTHMEN",
+    "role": "Computer Science Engineer - Business Intelligence & Data Engineering",
+    "paragraph1": "A recent graduate in computer engineering from ESPRIT, I am passionate about Business Intelligence and Artificial Intelligence. I enjoy designing innovative solutions that combine technical performance with business value.",
+    "paragraph2": "Throughout my career, I have led several concrete projects at ONRTECH, BID Consulting, and SkyWare, covering predictive modeling, BI visualization, and intelligent automation. These experiences have allowed me to connect data to decision-making.",
+    "paragraph3": "My expertise covers the entire data value chain: from ETL and modeling to creating analytical dashboards and AI models deployed in cloud environments. I am committed to designing high-performance, scalable data-driven applications.",
+    "tag1": "Business Intelligence",
+    "tag2": "Data Engineering",
+    "tag3": "Machine Learning"
+  },
+  "skills": {
+    "subtitle": "What I Do",
+    "title": "Skills & Expertise",
+    "categoryDescription": "Technologies and tools mastered in this field",
+    "beginner": "Beginner",
+    "expert": "Expert",
+    "categories": {
+      "bi": "Business Intelligence",
+      "dataScience": "Data Science",
+      "ai": "Artificial Intelligence",
+      "databases": "Databases",
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "devops": "DevOps & Tools"
+    }
+  },
+  "education": {
+    "subtitle": "Academic Background",
+    "title": "Education",
+    "description": "Strong academic foundation in computer science, data engineering, and business intelligence",
+    "engineerDegree": "Engineer's Degree",
+    "bachelorDegree": "Bachelor's Degree",
+    "degree1": "Engineering Degree - ERP & Business Intelligence",
+    "degree2": "Applied License in Mechanical Engineering - Mechanical Construction & Manufacturing",
+    "institution1": "ESPRIT - Private Higher School of Engineering and Technology",
+    "institution2": "ISET - Higher Institute of Technological Studies of Bizerte"
+  },
+  "certifications": {
+    "subtitle": "Professional Credentials",
+    "title": "Certifications",
+    "description": "Industry-recognized certifications validating my expertise in cloud computing, data engineering, and machine learning",
+    "viewCertificate": "View Certificate",
+    "credentialId": "Credential ID",
+    "items": {
+      "1": {
+        "title": "Natural Language Processing (NLP) Certification",
+        "description": "Advanced certification covering natural language processing techniques, transformers, attention mechanisms, and state-of-the-art NLP applications."
+      },
+      "2": {
+        "title": "Anomaly Detection & Predictive Analytics",
+        "description": "Specialized certification in anomaly detection techniques, predictive modeling, and advanced analytics for identifying patterns and outliers in complex datasets."
+      },
+      "3": {
+        "title": "PowerBI Data Analytics Professional",
+        "description": "Professional certification demonstrating expertise in data visualization, business intelligence dashboards, and advanced analytics using Microsoft Power BI."
+      },
+      "4": {
+        "title": "Supply Chain Management & Digital Transformation",
+        "description": "Certification focused on modern supply chain management, digital transformation strategies, and implementation of SCM solutions in enterprise environments."
+      }
+    }
+  },
+  "projects": {
+    "subtitle": "My Work",
+    "title": "Featured Projects",
+    "description": "Some of my recent work",
+    "filterAll": "All",
+    "seeMore": "... See more",
+    "seeLess": "See less",
+    "code": "Code",
+    "live": "Live",
+    "dashboard": "Dashboard",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "technologies": "Technologies",
+    "items": {
+      "1": {
+        "title": "ETL Food Analytics",
+        "description": "A data-driven analytics platform that collects, cleans, and enriches food product data from multiple e-commerce sources to provide actionable insights for manufacturers and consumers \u2014 enabling smarter decisions through AI-powered enrichment and interactive dashboards."
+      },
+      "2": {
+        "title": "Google ADs Management",
+        "description": "A business intelligence platform that integrates data from Google Analytics and social media to deliver actionable insights \u2014 helping optimize marketing strategies, align business goals, and track website and campaign performance."
+      },
+      "3": {
+        "title": "Business Management Textiles",
+        "description": "A data-driven decision support platform for textile companies, designed to optimize marketing strategies, align operations with business goals, adapt to market changes, and monitor factory and employee performance."
+      },
+      "4": {
+        "title": "Football Management Platform",
+        "description": "An intelligent platform designed to analyze and optimize player performance through data-driven insights. The project empowers sports teams to make informed strategic decisions and enhance their competitive edge."
+      },
+      "5": {
+        "title": "DevOps Project",
+        "description": "A backend application designed to manage university dormitories efficiently, integrating DevOps practices for continuous development and deployment. The system automates data management for students, rooms, and administration, while CI/CD pipelines ensure reliable delivery and version control."
+      },
+      "6": {
+        "title": "Foyer Management",
+        "description": "A backend application built to streamline the management of university dormitories and student housing. It provides structured APIs for handling student records, room assignments, and administrative operations with secure and efficient data management."
+      },
+      "7": {
+        "title": "Airport Management",
+        "description": "A backend web application developed to simplify and optimize airport management operations. The system handles key administrative tasks such as flight scheduling, passenger management, and resource coordination with a structured and scalable architecture."
+      },
+      "8": {
+        "title": "Electronic Mail Management",
+        "description": "A web application for the electronic management of official correspondence within the Ras Djebel municipality. The system facilitates the tracking and traceability of mail and enables the mayor to electronically sign official documents securely and efficiently."
+      },
+      "9": {
+        "title": "Election Management",
+        "description": "A desktop application developed to manage municipal elections in Tunisia. The system supports voter registration, candidate management, and results processing through a secure and efficient local interface."
+      }
+    }
+  },
+  "contact": {
+    "subtitle": "Let's Connect",
+    "title": "Get In Touch",
+    "description": "Have a project in mind? Let's work together!",
+    "contactInfo": "Contact Information",
+    "connectWithMe": "Connect With Me",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "name": "Name",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "✅ Message sent successfully! I will respond soon.",
+    "error": "❌ Error sending message. Please try again or contact me directly at nadhirbenothmen12@gmail.com",
+    "namePlaceholder": "Your Name",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "Project Inquiry",
+    "messagePlaceholder": "Tell me about your project..."
+  },
+  "footer": {
+    "portfolio": "Portfolio",
+    "description": "BI & Data Engineer passionate about building innovative solutions and creating meaningful impact through technology.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "copyright": "Portfolio. Made by",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with",
+    "by": "by"
+  },
+  "stats": {
+    "yearsExperience": "Years Experience",
+    "projectsCompleted": "Projects Completed",
+    "technologies": "Technologies",
+    "certifications": "Certifications"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "readMore": "Read More",
+    "learnMore": "Learn More"
+  }
+}

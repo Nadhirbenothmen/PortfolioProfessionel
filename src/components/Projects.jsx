@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import projects from '../data/projects'
 
 const ProjectCard = ({ project, index }) => {
+  const { t } = useTranslation()
   const [isExpanded, setIsExpanded] = useState(false)
   const [showAllTech, setShowAllTech] = useState(false)
 
@@ -33,7 +35,7 @@ const ProjectCard = ({ project, index }) => {
       <div className="relative p-6">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors">
-            {project.title}
+            {t(`projects.items.${project.id}.title`)}
           </h3>
           <span className="px-3 py-1 bg-gradient-to-r from-primary/10 to-accent/10 text-primary rounded-full text-xs font-bold whitespace-nowrap ml-2">
             {project.category}
@@ -51,14 +53,14 @@ const ProjectCard = ({ project, index }) => {
         
         <div className="text-gray-600 dark:text-gray-300 mb-4">
           <p className={isExpanded ? '' : 'line-clamp-3'}>
-            {project.description}
+            {t(`projects.items.${project.id}.description`)}
           </p>
-          {project.description.length > 150 && (
+          {t(`projects.items.${project.id}.description`).length > 150 && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="text-primary hover:text-accent font-medium text-sm mt-1 transition-colors"
             >
-              {isExpanded ? 'Voir moins' : '... Voir plus'}
+              {isExpanded ? t('projects.seeLess') : t('projects.seeMore')}
             </button>
           )}
         </div>
@@ -79,7 +81,7 @@ const ProjectCard = ({ project, index }) => {
               onClick={() => setShowAllTech(!showAllTech)}
               className="px-3 py-1 bg-gradient-to-r from-primary/10 to-accent/10 text-primary rounded-lg text-sm font-medium hover:from-primary/20 hover:to-accent/20 transition-all cursor-pointer"
             >
-              {showAllTech ? 'Voir moins' : `+${project.technologies.length - 3}`}
+              {showAllTech ? t('projects.seeLess') : `+${project.technologies.length - 3}`}
             </button>
           )}
         </div>
@@ -96,7 +98,7 @@ const ProjectCard = ({ project, index }) => {
               className={`${project.liveUrl ? 'flex-1' : 'w-full'} flex items-center justify-center space-x-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors duration-300 font-medium`}
             >
               <FaGithub size={18} />
-              <span>Code</span>
+              <span>{t('projects.code')}</span>
             </motion.a>
           )}
           {project.liveUrl && (
@@ -109,7 +111,7 @@ const ProjectCard = ({ project, index }) => {
               className={`${project.githubUrl ? 'flex-1' : 'w-full'} flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-lg hover:shadow-lg transition-all duration-300 font-medium`}
             >
               <FaExternalLinkAlt size={16} />
-              <span>{project.linkType || 'Live'}</span>
+              <span>{project.linkType === 'Dashboard' ? t('projects.dashboard') : t('projects.live')}</span>
             </motion.a>
           )}
         </div>
@@ -119,6 +121,7 @@ const ProjectCard = ({ project, index }) => {
 }
 
 const Projects = () => {
+  const { t } = useTranslation()
   const [filter, setFilter] = useState('All')
   
   const categories = ['All', ...new Set(projects.map(project => project.category))]
@@ -137,13 +140,13 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider"></span>
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t('projects.subtitle')}</span>
           <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-4 mt-2">
-            Featured Projects
+            {t('projects.title')}
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
           <p className="text-gray-600 dark:text-gray-300 mt-4 text-lg">
-            Some of my recent work
+            {t('projects.description')}
           </p>
         </motion.div>
 
@@ -167,7 +170,7 @@ const Projects = () => {
                   : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:shadow-md border border-gray-200 dark:border-gray-700'
               }`}
             >
-              {category}
+              {category === 'All' ? t('projects.filterAll') : category}
             </motion.button>
           ))}
         </motion.div>

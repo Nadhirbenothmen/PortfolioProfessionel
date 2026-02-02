@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaChevronDown, FaPython, FaDatabase, FaDocker, FaReact, FaAngular, FaChartBar, FaJava, FaBrain, FaChartLine, FaTable, FaChartPie, FaServer, FaChartArea, FaMicrosoft } from 'react-icons/fa'
 import { SiTensorflow, SiMongodb, SiPostgresql, SiPytorch, SiTalend, SiMysql, SiOracle, SiTableau } from 'react-icons/si'
+import { useTranslation } from 'react-i18next'
 
 const Hero = () => {
+  const { t } = useTranslation()
   // Floating icons data
   const floatingIcons = [
     { Icon: FaPython, color: '#3776AB', size: 40, delay: 0, duration: 20, x: '10%', y: '15%' },
@@ -97,9 +99,9 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="mb-6"
           >
-            <span className="text-accent text-sm md:text-base font-semibold uppercase tracking-widest mb-3 block">Hello!</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-1">
-              I Am <span className="text-primary">BEN OTHMEN Nadhir</span>
+            <span className="text-accent text-sm md:text-base font-semibold uppercase tracking-widest mb-3 block">{t('hero.greeting')}</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-1 whitespace-nowrap">
+              {t('hero.iAm')} <span className="text-primary">{t('hero.name')}</span>
             </h1>
           </motion.div>
 
@@ -110,7 +112,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-xl md:text-2xl font-semibold text-white mb-4"
           >
-            Business Intelligence & Data Engineer
+            {t('hero.title')}
           </motion.h2>
 
           {/* Description */}
@@ -120,7 +122,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-sm md:text-base text-gray-300 mb-8 max-w-xl leading-relaxed"
           >
-            Transforming data into actionable insights through Business Intelligence and AI/ML. I deliver innovative solutions that bridge technical excellence with strategic business value.
+            {t('hero.description')}
           </motion.p>
 
           {/* Social Links */}
@@ -173,7 +175,7 @@ const Hero = () => {
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
               className="px-8 py-3 bg-primary text-white rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-blue-600 transition-all duration-300"
             >
-              View Projects
+              {t('hero.viewProjects')}
             </motion.button>
             
             <motion.a
@@ -184,7 +186,7 @@ const Hero = () => {
               className="px-8 py-3 bg-green-500 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl hover:bg-green-600 transition-all duration-300 flex items-center gap-2"
             >
               <FaDownload size={18} />
-              Download CV
+              {t('hero.downloadCV')}
             </motion.a>
           </motion.div>
           </div>
@@ -203,7 +205,7 @@ const Hero = () => {
           transition={{ duration: 1.5, repeat: Infinity }}
           className="flex flex-col items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors cursor-pointer"
         >
-          <span className="text-sm font-semibold mb-2">Scroll Down</span>
+          <span className="text-sm font-semibold mb-2">{t('hero.scrollDown')}</span>
           <FaChevronDown size={24} />
         </motion.button>
       </motion.div>

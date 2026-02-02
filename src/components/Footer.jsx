@@ -1,6 +1,8 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaHeart } from 'react-icons/fa'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+  const { t } = useTranslation()
   const currentYear = new Date().getFullYear()
 
   return (
@@ -9,23 +11,22 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Portfolio</h3>
+            <h3 className="text-2xl font-bold mb-4">{t('footer.portfolio')}</h3>
             <p className="text-gray-400 dark:text-gray-500">
-              BI & Data Engineer passionate about building innovative solutions
-              and creating meaningful impact through technology.
+              {t('footer.description')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>
                 <button
                   onClick={() => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-gray-400 hover:text-primary transition-colors duration-300"
                 >
-                  Home
+                  {t('footer.home')}
                 </button>
               </li>
               <li>
@@ -33,7 +34,7 @@ const Footer = () => {
                   onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-gray-400 hover:text-primary transition-colors duration-300"
                 >
-                  About
+                  {t('footer.about')}
                 </button>
               </li>
               <li>
@@ -41,7 +42,7 @@ const Footer = () => {
                   onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-gray-400 hover:text-primary transition-colors duration-300"
                 >
-                  Skills
+                  {t('footer.skills')}
                 </button>
               </li>
               <li>
@@ -49,7 +50,7 @@ const Footer = () => {
                   onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-gray-400 hover:text-primary transition-colors duration-300"
                 >
-                  Projects
+                  {t('footer.projects')}
                 </button>
               </li>
               <li>
@@ -57,7 +58,7 @@ const Footer = () => {
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   className="text-gray-400 hover:text-primary transition-colors duration-300"
                 >
-                  Contact
+                  {t('footer.contact')}
                 </button>
               </li>
             </ul>
@@ -65,7 +66,7 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Connect</h4>
+            <h4 className="text-lg font-semibold mb-4">{t('footer.connect')}</h4>
             <div className="flex space-x-4">
               <a
                 href="https://github.com/Nadhirbenothmen"
@@ -96,7 +97,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center space-x-2">
-            <span>© {currentYear} Portfolio. Made by</span>
+            <span>© {currentYear} {t('footer.copyright')}</span>
             <FaHeart className="text-accent" />
             <span>BEN OTHMEN Nadhir</span>
           </p>

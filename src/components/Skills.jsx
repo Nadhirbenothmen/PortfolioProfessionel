@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { TbFlame } from "react-icons/tb"; // style proche du logo PyTorch
 import { 
   FaPython, FaDatabase, FaDocker, FaGitAlt, 
@@ -16,11 +17,12 @@ import {
 import { DiJenkins } from 'react-icons/di';
 
 const Skills = () => {
-  const [activeFilter, setActiveFilter] = useState('Business Intelligence')
+  const { t } = useTranslation()
+  const [activeFilter, setActiveFilter] = useState('bi')
   
   const skillCategories = [
     {
-      title: 'Business Intelligence',
+      key: 'bi',
       color: 'from-yellow-500 to-yellow-600',
       icon: '📊',
       skills: [
@@ -35,7 +37,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Data Science',
+      key: 'dataScience',
       color: 'from-pink-500 to-pink-600',
       icon: '📊',
       skills: [
@@ -46,7 +48,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Artificial Intelligence',
+      key: 'ai',
       color: 'from-purple-500 to-purple-600',
       icon: '🤖',
       skills: [
@@ -60,7 +62,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Databases',
+      key: 'databases',
       color: 'from-orange-500 to-orange-600',
       icon: '🗄️',
       skills: [
@@ -72,7 +74,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Frontend Development',
+      key: 'frontend',
       color: 'from-blue-500 to-blue-600',
       icon: '💻',
       skills: [
@@ -84,7 +86,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'Backend Development',
+      key: 'backend',
       color: 'from-green-500 to-green-600',
       icon: '📋',
       skills: [
@@ -97,7 +99,7 @@ const Skills = () => {
       ]
     },
     {
-      title: 'DevOps & Tools',
+      key: 'devops',
       color: 'from-orange-500 to-orange-600',
       icon: '⚙️',
       skills: [
@@ -130,9 +132,9 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">What I Do</span>
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">{t('skills.subtitle')}</span>
           <h2 className="text-5xl font-bold text-gray-900 dark:text-white mb-4 mt-2">
-            Skills & Expertise
+            {t('skills.title')}
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
         </motion.div>
@@ -147,18 +149,18 @@ const Skills = () => {
         >
           {skillCategories.map((category) => (
             <motion.button
-              key={category.title}
+              key={category.key}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setActiveFilter(category.title)}
+              onClick={() => setActiveFilter(category.key)}
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2 ${
-                activeFilter === category.title
+                activeFilter === category.key
                   ? 'bg-gray-700 dark:bg-gray-800 text-white border-2 border-blue-500 shadow-lg shadow-blue-500/50'
                   : 'bg-gray-700 dark:bg-gray-800 text-gray-300 border-2 border-gray-600 dark:border-gray-700 hover:border-gray-500'
               }`}
             >
               <span className="text-xl">{category.icon}</span>
-              <span>{category.title}</span>
+              <span>{t(`skills.categories.${category.key}`)}</span>
             </motion.button>
           ))}
         </motion.div>
@@ -166,9 +168,9 @@ const Skills = () => {
         {/* Selected Category Skills */}
         <div className="space-y-8">
           {skillCategories.map((category) => (
-            (activeFilter === category.title) && (
+            (activeFilter === category.key) && (
               <motion.div
-                key={category.title}
+                key={category.key}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
@@ -180,8 +182,8 @@ const Skills = () => {
                     <span className="text-4xl">{category.icon}</span>
                   </div>
                   <div>
-                    <h3 className="text-3xl font-bold text-white">{category.title}</h3>
-                    <p className="text-gray-400 text-sm">Technologies and tools mastered in this field</p>
+                    <h3 className="text-3xl font-bold text-white">{t(`skills.categories.${category.key}`)}</h3>
+                    <p className="text-gray-400 text-sm">{t('skills.categoryDescription')}</p>
                   </div>
                 </div>
 
@@ -219,8 +221,8 @@ const Skills = () => {
                     </div>
                     
                     <div className="flex items-center justify-between text-sm text-gray-400 mt-2">
-                      <span>Beginner</span>
-                      <span>Expert</span>
+                      <span>{t('skills.beginner')}</span>
+                      <span>{t('skills.expert')}</span>
                     </div>
                   </motion.div>
                 ))}

@@ -1,0 +1,190 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "education": "Formation",
+    "certifications": "Certifications",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour !",
+    "iAm": "Je suis",
+    "name": "BEN OTHMEN Nadhir",
+    "title": "Ingénieur Business Intelligence & Data",
+    "description": "Transformer les données en insights actionnables grâce à la Business Intelligence et l'IA/ML. Je fournis des solutions innovantes qui allient excellence technique et valeur stratégique.",
+    "viewProjects": "Voir les Projets",
+    "downloadCV": "Télécharger CV",
+    "scrollDown": "Défiler vers le bas"
+  },
+  "about": {
+    "subtitle": "Apprenez à me connaître",
+    "title": "À Propos",
+    "badge1": "Ingénieur ERP & BI",
+    "badge2": "Développeur Data & IA",
+    "stat1": "Années d'expérience",
+    "stat2": "Projets réalisés",
+    "stat3": "Stages & Freelances",
+    "name": "Nadhir BEN OTHMEN",
+    "role": "Ingénieur en Informatique - Business Intelligence & Data Engineering",
+    "paragraph1": "Jeune diplômé en génie informatique de l'ESPRIT, je suis passionné par la Business Intelligence et l'Intelligence Artificielle. J'aime concevoir des solutions innovantes qui allient performance technique et valeur métier.",
+    "paragraph2": "Au fil de mon parcours, j'ai piloté plusieurs projets concrets chez ONRTECH, BID Consulting et SkyWare, couvrant la modélisation prédictive, la visualisation BI et l'automatisation intelligente. Ces expériences m'ont permis de relier les données à la prise de décision.",
+    "paragraph3": "Mon expertise couvre l'ensemble de la chaîne de valeur des données : de l'ETL et la modélisation jusqu'à la création de tableaux de bord analytiques et de modèles d'IA déployés dans des environnements cloud. Je m'engage à concevoir des applications data performantes et évolutives.",
+    "tag1": "Business Intelligence",
+    "tag2": "Data Engineering",
+    "tag3": "Machine Learning"
+  },
+  "skills": {
+    "subtitle": "Ce que je fais",
+    "title": "Compétences & Expertise",
+    "categoryDescription": "Technologies et outils maîtrisés dans ce domaine",
+    "beginner": "Débutant",
+    "expert": "Expert",
+    "categories": {
+      "bi": "Business Intelligence",
+      "dataScience": "Data Science",
+      "ai": "Intelligence Artificielle",
+      "databases": "Bases de Données",
+      "frontend": "Développement Frontend",
+      "backend": "Développement Backend",
+      "devops": "DevOps & Outils"
+    }
+  },
+  "education": {
+    "subtitle": "Parcours Académique",
+    "title": "Formation",
+    "description": "Solide formation académique en informatique, ingénierie des données et business intelligence",
+    "engineerDegree": "Diplôme d'Ingénieur",
+    "bachelorDegree": "Licence Appliquée",
+    "degree1": "Diplôme d'Ingénieur - ERP & Business Intelligence",
+    "degree2": "Licence Appliquée en Génie Mécanique - Construction & Fabrication Mécanique",
+    "institution1": "ESPRIT - École Supérieure Privée d'Ingénierie et de Technologie",
+    "institution2": "ISET - Institut Supérieur des Études Technologiques de Bizerte"
+  },
+  "certifications": {
+    "subtitle": "Certifications Professionnelles",
+    "title": "Certifications",
+    "description": "Certifications reconnues par l'industrie validant mon expertise en cloud computing, ingénierie des données et machine learning",
+    "viewCertificate": "Voir le certificat",
+    "credentialId": "ID d'identification",
+    "items": {
+      "1": {
+        "title": "Certification Natural Language Processing (NLP)",
+        "description": "Certification avancée couvrant les techniques de traitement du langage naturel, les transformers, les mécanismes d'attention et les applications NLP de pointe."
+      },
+      "2": {
+        "title": "Détection d'Anomalies & Analyse Prédictive",
+        "description": "Certification spécialisée dans les techniques de détection d'anomalies, la modélisation prédictive et l'analyse avancée pour identifier les modèles et les valeurs aberrantes dans des ensembles de données complexes."
+      },
+      "3": {
+        "title": "PowerBI Data Analytics Professionnel",
+        "description": "Certification professionnelle démontrant une expertise en visualisation de données, tableaux de bord Business Intelligence et analyses avancées avec Microsoft Power BI."
+      },
+      "4": {
+        "title": "Gestion de la Chaîne d'Approvisionnement & Transformation Digitale",
+        "description": "Certification axée sur la gestion moderne de la chaîne d'approvisionnement, les stratégies de transformation digitale et la mise en œuvre de solutions SCM dans les environnements d'entreprise."
+      }
+    }
+  },
+  "projects": {
+    "subtitle": "Mon Travail",
+    "title": "Projets Phares",
+    "description": "Quelques-uns de mes travaux récents",
+    "filterAll": "Tous",
+    "seeMore": "... Voir plus",
+    "seeLess": "Voir moins",
+    "code": "Code",
+    "live": "Live",
+    "dashboard": "Tableau de bord",
+    "viewProject": "Voir le Projet",
+    "viewCode": "Voir le Code",
+    "technologies": "Technologies",
+    "items": {
+      "1": {
+        "title": "ETL Food Analytics",
+        "description": "Une plateforme d'analyse basée sur les données qui collecte, nettoie et enrichit les données de produits alimentaires provenant de plusieurs sources d'e-commerce pour fournir des informations exploitables aux fabricants et consommateurs \u2014 permettant des décisions plus intelligentes grâce à l'enrichissement par IA et des tableaux de bord interactifs."
+      },
+      "2": {
+        "title": "Google ADs Management",
+        "description": "Une plateforme de Business Intelligence qui intègre les données de Google Analytics et des réseaux sociaux pour fournir des informations exploitables \u2014 aidant à optimiser les stratégies marketing, aligner les objectifs commerciaux et suivre les performances du site web et des campagnes."
+      },
+      "3": {
+        "title": "Gestion d'Entreprise Textile",
+        "description": "Une plateforme d'aide à la décision basée sur les données pour les entreprises textiles, conçue pour optimiser les stratégies marketing, aligner les opérations avec les objectifs commerciaux, s'adapter aux changements du marché et surveiller les performances des usines et des employés."
+      },
+      "4": {
+        "title": "Plateforme de Gestion du Football",
+        "description": "Une plateforme intelligente conçue pour analyser et optimiser les performances des joueurs grâce à des informations basées sur les données. Le projet permet aux équipes sportives de prendre des décisions stratégiques éclairées et d'améliorer leur avantage compétitif."
+      },
+      "5": {
+        "title": "Projet DevOps",
+        "description": "Une application backend conçue pour gérer efficacement les résidences universitaires, intégrant les pratiques DevOps pour le développement et le déploiement continus. Le système automatise la gestion des données pour les étudiants, les chambres et l'administration, tandis que les pipelines CI/CD garantissent une livraison fiable et un contrôle de version."
+      },
+      "6": {
+        "title": "Gestion de Foyer",
+        "description": "Une application backend conçue pour rationaliser la gestion des résidences universitaires et des logements étudiants. Elle fournit des API structurées pour gérer les dossiers des étudiants, les affectations de chambres et les opérations administratives avec une gestion des données sécurisée et efficace."
+      },
+      "7": {
+        "title": "Gestion d'Aéroport",
+        "description": "Une application web backend développée pour simplifier et optimiser les opérations de gestion aéroportuaire. Le système gère les tâches administratives clés telles que la planification des vols, la gestion des passagers et la coordination des ressources avec une architecture structurée et évolutive."
+      },
+      "8": {
+        "title": "Gestion Électronique du Courrier",
+        "description": "Une application web pour la gestion électronique de la correspondance officielle au sein de la municipalité de Ras Djebel. Le système facilite le suivi et la traçabilité du courrier et permet au maire de signer électroniquement des documents officiels de manière sécurisée et efficace."
+      },
+      "9": {
+        "title": "Gestion des Élections",
+        "description": "Une application de bureau développée pour gérer les élections municipales en Tunisie. Le système prend en charge l'inscription des électeurs, la gestion des candidats et le traitement des résultats via une interface locale sécurisée et efficace."
+      }
+    }
+  },
+  "contact": {
+    "subtitle": "Restons Connectés",
+    "title": "Contactez-moi",
+    "description": "Vous avez un projet en tête ? Travaillons ensemble !",
+    "contactInfo": "Informations de Contact",
+    "connectWithMe": "Connectez-vous avec Moi",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "name": "Nom",
+    "subject": "Sujet",
+    "message": "Message",
+    "send": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "success": "✅ Message envoyé avec succès ! Je vous répondrai bientôt.",
+    "error": "❌ Erreur lors de l'envoi. Veuillez réessayer ou me contacter directement à nadhirbenothmen12@gmail.com",
+    "namePlaceholder": "Votre Nom",
+    "emailPlaceholder": "votre.email@exemple.com",
+    "subjectPlaceholder": "Demande de Projet",
+    "messagePlaceholder": "Parlez-moi de votre projet..."
+  },
+  "footer": {
+    "portfolio": "Portfolio",
+    "description": "Ingénieur BI & Data passionné par la création de solutions innovantes et la génération d'un impact significatif grâce à la technologie.",
+    "quickLinks": "Liens Rapides",
+    "connect": "Connexion",
+    "home": "Accueil",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact",
+    "copyright": "Portfolio. Fait par",
+    "rights": "Tous droits réservés.",
+    "madeWith": "Fait avec",
+    "by": "par"
+  },
+  "stats": {
+    "yearsExperience": "Années d'Expérience",
+    "projectsCompleted": "Projets Réalisés",
+    "technologies": "Technologies",
+    "certifications": "Certifications"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "readMore": "Lire Plus",
+    "learnMore": "En Savoir Plus"
+  }
+}
