@@ -42,12 +42,115 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-16">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-slate-800 to-gray-900 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-        <div className="absolute inset-0 opacity-30 dark:opacity-20">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl animate-blob"></div>
-          <div className="absolute top-40 right-10 w-72 h-72 bg-accent rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl animate-blob animation-delay-2000"></div>
-          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl animate-blob animation-delay-4000"></div>
+      {/* Enhanced Professional Universe Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0B1120] via-[#1a1f35] to-[#0d1117]">
+        {/* Deep Space Layer - Distant Stars */}
+        <div className="absolute inset-0">
+          {[...Array(150)].map((_, i) => (
+            <div
+              key={`star-distant-${i}`}
+              className="absolute rounded-full bg-white"
+              style={{
+                width: Math.random() * 1 + 0.3 + 'px',
+                height: Math.random() * 1 + 0.3 + 'px',
+                left: Math.random() * 100 + '%',
+                top: Math.random() * 100 + '%',
+                opacity: Math.random() * 0.3 + 0.1,
+              }}
+            />
+          ))}
+        </div>
+        
+        {/* Main Stars Layer - Twinkling */}
+        <div className="absolute inset-0">
+          {[...Array(80)].map((_, i) => (
+            <div
+              key={`star-main-${i}`}
+              className="absolute rounded-full bg-white"
+              style={{
+                width: Math.random() * 2.5 + 0.8 + 'px',
+                height: Math.random() * 2.5 + 0.8 + 'px',
+                left: Math.random() * 100 + '%',
+                top: Math.random() * 100 + '%',
+                opacity: Math.random() * 0.6 + 0.3,
+                boxShadow: '0 0 4px rgba(255,255,255,0.8)',
+                animation: `twinkle ${Math.random() * 5 + 3}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 4}s`
+              }}
+            />
+          ))}
+        </div>
+        
+        {/* Bright Stars */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={`star-bright-${i}`}
+              className="absolute rounded-full bg-white"
+              style={{
+                width: '3px',
+                height: '3px',
+                left: Math.random() * 100 + '%',
+                top: Math.random() * 100 + '%',
+                opacity: 0.9,
+                boxShadow: '0 0 6px rgba(255,255,255,1), 0 0 12px rgba(147,197,253,0.5)',
+                animation: `twinkle ${Math.random() * 4 + 2}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 3}s`
+              }}
+            />
+          ))}
+        </div>
+        
+        {/* Shooting Stars - More Visible */}
+        <div className="absolute inset-0">
+          {[...Array(8)].map((_, i) => (
+            <div
+              key={`shooting-${i}`}
+              className="absolute"
+              style={{
+                left: Math.random() * 100 + '%',
+                top: Math.random() * 60 + '%',
+                animation: `shooting-star ${Math.random() * 4 + 5}s linear infinite`,
+                animationDelay: `${i * 2}s`
+              }}
+            >
+              <div className="w-[2px] h-[2px] bg-white rounded-full"
+                   style={{
+                     boxShadow: '0 0 6px 3px rgba(255,255,255,0.9), 0 0 12px 6px rgba(147,197,253,0.6), -30px 30px 20px 2px rgba(255,255,255,0.3), -60px 60px 30px 1px rgba(147,197,253,0.2)'
+                   }}
+              ></div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Nebula Clouds - Rich Colors */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-10 w-[700px] h-[700px] bg-gradient-to-br from-blue-600/25 via-purple-600/15 to-transparent rounded-full filter blur-3xl animate-pulse" style={{ animationDuration: '12s' }}></div>
+          <div className="absolute bottom-20 left-10 w-[600px] h-[600px] bg-gradient-to-tr from-indigo-600/20 via-cyan-600/15 to-transparent rounded-full filter blur-3xl animate-pulse" style={{ animationDuration: '15s', animationDelay: '3s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-purple-600/15 via-pink-600/10 to-transparent rounded-full filter blur-3xl" style={{ animation: 'pulse-glow 18s ease-in-out infinite', animationDelay: '6s' }}></div>
+        </div>
+        
+        {/* Floating Planets/Orbs */}
+        <div className="absolute top-20 right-[12%] w-20 h-20 rounded-full bg-gradient-to-br from-orange-500/40 to-red-600/30 opacity-50 filter blur-sm animate-float" style={{ animationDuration: '10s', boxShadow: '0 0 40px rgba(249,115,22,0.3)' }}></div>
+        <div className="absolute bottom-28 left-[8%] w-14 h-14 rounded-full bg-gradient-to-br from-blue-400/45 to-cyan-500/35 opacity-55 filter blur-sm animate-float" style={{ animationDuration: '12s', animationDelay: '2s', boxShadow: '0 0 35px rgba(59,130,246,0.3)' }}></div>
+        <div className="absolute top-[40%] left-[88%] w-10 h-10 rounded-full bg-gradient-to-br from-purple-400/40 to-pink-500/30 opacity-45 filter blur-sm animate-float" style={{ animationDuration: '14s', animationDelay: '4s', boxShadow: '0 0 30px rgba(168,85,247,0.25)' }}></div>
+        
+        {/* Advanced Reflection/Shine Effects */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-25">
+          <div className="absolute top-[-50%] left-[-25%] w-[150%] h-[150%] bg-gradient-to-br from-white/10 via-transparent to-transparent rotate-45 animate-shine"></div>
+          <div className="absolute top-[20%] right-[-30%] w-[100%] h-[100%] bg-gradient-to-bl from-blue-300/12 via-transparent to-transparent rotate-[-30deg] animate-shine" style={{ animationDelay: '2s', animationDuration: '10s' }}></div>
+          <div className="absolute bottom-[-10%] left-[5%] w-[80%] h-[80%] bg-gradient-to-tr from-indigo-300/10 via-transparent to-transparent rotate-12 animate-shine" style={{ animationDelay: '5s', animationDuration: '12s' }}></div>
+        </div>
+        
+        {/* Professional Grid Overlay */}
+        <div className="absolute inset-0 opacity-[0.015]" 
+             style={{
+               backgroundImage: `
+                 linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
+                 linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px)
+               `,
+               backgroundSize: '100px 100px'
+             }}>
         </div>
       </div>
 
