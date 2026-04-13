@@ -122,12 +122,11 @@ const ProjectCard = ({ project, index }) => {
 
 const Projects = () => {
   const { t } = useTranslation()
+  const categories = ['All', 'Business Intelligence', 'Other Projects']
   const [filter, setFilter] = useState('All')
   
-  const categories = ['All', ...new Set(projects.map(project => project.category))]
-  
-  const filteredProjects = filter === 'All' 
-    ? projects 
+  const filteredProjects = filter === 'All'
+    ? projects
     : projects.filter(project => project.category === filter)
   
   return (

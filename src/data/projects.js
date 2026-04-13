@@ -7,7 +7,7 @@ const projects = [
     technologies: ["Python", "MongoDB", "Power BI", "Spring Boot", "Angular", "AI"],
     githubUrl: "https://github.com/ONRTECH/VN_parsers_ES/tree/Nadhir",
     liveUrl: "https://www.youtube.com/watch?v=LO6ZVPwAdQ8",
-    category: "Web & BI",
+    category: "Business Intelligence",
     date: "2025"
   },
   {
@@ -19,7 +19,7 @@ const projects = [
     githubUrl: "https://github.com/Nadhirbenothmen/BI-Projects/blob/main/StageBI%20Consulting%20.pbix",
     liveUrl: "https://github.com/Nadhirbenothmen/BI-Projects/blob/main/StageBI%20Consulting%20.pbix",
     linkType: "Dashboard",
-    category: "BI",
+    category: "Business Intelligence",
     date: "2024"
   },
    {
@@ -31,7 +31,7 @@ const projects = [
     githubUrl: "https://github.com/Nadhirbenothmen/BI-Projects/blob/main/StageSKyware.pbix",
     liveUrl: "https://github.com/Nadhirbenothmen/BI-Projects/blob/main/StageSKyware.pbix",
     linkType: "Dashboard",
-    category: "BI",
+    category: "Business Intelligence",
     date: "2024"
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     technologies: ["Power BI", "Talend", "Python", "Angular", "PostgreSQL", "Machine Learning" , "Web Scraping"],
     githubUrl: "https://github.com/Nadhirbenothmen/Football-Staff-Management",
     liveUrl: "https://www.youtube.com/watch?v=h6WLriOammw&t=1s",
-    category: "Web & BI",
+    category: "Business Intelligence",
     date: "2024"
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     technologies: ["GitHub", "jenkins", "SonarQube", "Docker", "Grafana", "Prometheus", "JUnit 5"],
     githubUrl: "https://github.com/Nadhirbenothmen/ManagementFoyerDEV",
     liveUrl: null,
-    category: "Full-Stack",
+    category: "Other Projects",
     date: "2024"
   },
   {
@@ -64,7 +64,7 @@ const projects = [
     technologies: ["Intellij IDEA", "MySQL", "Spring Boot", "Swagger", "XAAMP", "Postman"],
     githubUrl: "https://github.com/Nadhirbenothmen/ManagementFoyerDEV",
     liveUrl: null,
-    category: "Backend",
+    category: "Other Projects",
     date: "2024"
   },
   {
@@ -75,7 +75,7 @@ const projects = [
     technologies: ["C#", "Microsoft Visual Studio", "ASP.NET Core"],
     githubUrl: "https://github.com/Nadhirbenothmen/AirportManagement",
     liveUrl: null,
-    category: "Backend",
+    category: "Other Projects",
     date: "2024"
   },
    {
@@ -86,7 +86,7 @@ const projects = [
     technologies: ["Docker", "MaarchCourrier", "linux", "MaarchParrapheur"],
     githubUrl: null,
     liveUrl: "https://www.youtube.com/watch?v=pFIy1gSHi1o&t=22s",
-    category: "Full-Stack",
+    category: "Other Projects",
     date: "2023"
   },
   {
@@ -97,7 +97,7 @@ const projects = [
     technologies: ["C Programming", "GitHub", "Glade 2.12.2", "Linux"],
     githubUrl: "https://github.com/yourusername/task-manager",
     liveUrl: null,
-    category: "Full-Stack",
+    category: "Other Projects",
     date: "2022"
   }
 ]

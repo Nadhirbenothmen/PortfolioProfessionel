@@ -1,20 +1,15 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { TbFlame } from "react-icons/tb"; // style proche du logo PyTorch
 import { 
-  FaPython, FaDatabase, FaDocker, FaGitAlt, 
-  FaAws, FaChartBar, FaServer, FaCogs, 
-  FaPaintBrush, FaFileCode, FaJava, FaCode, 
-  FaMicrosoft, FaChartLine, FaTable, FaLeaf, FaAngular, FaReact, FaBrain, FaClock, FaLinux, FaGithub, FaTachometerAlt, FaFileAlt
+  FaPython, FaDatabase, FaDocker, 
+  FaCogs, FaJava, FaAngular, FaFileAlt, FaMicrosoft, FaChartLine, FaCss3Alt, FaGithub, FaTachometerAlt
 } from 'react-icons/fa'
 import { 
-  SiTensorflow, SiMongodb, SiPostgresql, 
-  SiExpress, SiDjango, SiJupyter, SiMysql,
-  SiOracle, SiSpringboot, SiDotnet, SiTypescript, SiTailwindcss, SiScikitlearn, SiPytorch, SiPandas, SiNumpy, SiTalend, SiSap,
-  SiSonarqube
+  SiMongodb, SiPostgresql, 
+  SiMysql,
+  SiOracle, SiSpringboot, SiDotnet, SiTalend
 } from 'react-icons/si'
-import { DiJenkins } from 'react-icons/di';
 
 const Skills = () => {
   const { t } = useTranslation()
@@ -33,32 +28,18 @@ const Skills = () => {
         { name: 'Reporting', icon: FaFileAlt, color: '#27AE60' },
         { name: 'KPI Dashboards', icon: FaTachometerAlt, color: '#E91E63' },
         { name: 'SSIS/SSAS', icon: FaMicrosoft, color: '#CC2927' },
-        { name: 'SAP', icon: SiSap, color: '#0FAAFF' },
+        { name: 'SQL', icon: FaDatabase, color: '#0F7FFF' },
       ]
     },
     {
       key: 'dataScience',
       color: 'from-pink-500 to-pink-600',
-      icon: '📊',
+      icon: '📈',
       skills: [
-        { name: 'Pandas', icon: SiPandas, color: '#150458' },
-        { name: 'NumPy', icon: SiNumpy, color: '#4DABCF' },
-        { name: 'Jupyter', icon: SiJupyter, color: '#F37626' },
-        { name: 'Matplotlib / Seaborn', icon: FaChartBar, color: '#11557C' },
-      ]
-    },
-    {
-      key: 'ai',
-      color: 'from-purple-500 to-purple-600',
-      icon: '🤖',
-      skills: [
-        { name: 'TensorFlow', icon: SiTensorflow, color: '#FF6F00' },
-        { name: 'PyTorch', icon: SiPytorch, color: '#EE4C2C' },
-        { name: 'Scikit-learn', icon: SiScikitlearn, color: '#F7931E' },
-        { name: 'Machine Learning', icon: FaBrain, color: '#FF6B9D' },
-        { name: 'Predictive Modeling', icon: FaChartLine, color: '#4ECDC4' },
-        { name: 'Feature Engineering', icon: FaCogs, color: '#95E1D3' },
-        { name: 'Time Series Forecasting', icon: FaClock, color: '#C7CEEA' },
+        { name: 'Python', icon: FaPython, color: '#3776AB' },
+        { name: 'Data Analysis', icon: FaChartLine, color: '#4ECDC4' },
+        { name: 'Pandas', icon: FaFileAlt, color: '#150458' },
+        { name: 'NumPy', icon: FaDatabase, color: '#4DABCF' },
       ]
     },
     {
@@ -78,10 +59,8 @@ const Skills = () => {
       color: 'from-blue-500 to-blue-600',
       icon: '💻',
       skills: [
-        { name: 'React', icon: FaReact, color: '#61DAFB' },
         { name: 'Angular', icon: FaAngular, color: '#DD0031' },
-        { name: 'TypeScript', icon: SiTypescript, color: '#3178C6' },
-        { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06B6D4' },
+        { name: 'CSS', icon: FaCss3Alt, color: '#264DE4' },
 
       ]
     },
@@ -92,10 +71,8 @@ const Skills = () => {
       skills: [
         { name: 'Spring Boot', icon: SiSpringboot, color: '#6DB33F' },
         { name: 'Python', icon: FaPython, color: '#3776AB' },
-        {name : 'Java', icon: FaJava, color: '#007396' },
+        { name: 'Java', icon: FaJava, color: '#007396' },
         { name: '.Net Core', icon: SiDotnet, color: '#512BD4' },
-        { name: 'Express.js', icon: SiExpress, color: '#ebee52ff' },
-        
       ]
     },
     {
@@ -104,11 +81,7 @@ const Skills = () => {
       icon: '⚙️',
       skills: [
         { name: 'Docker', icon: FaDocker, color: '#2496ED' },
-        { name: 'Git / GitHub', icon: FaGithub, color: '#F05032' },
-        { name: 'Linux', icon: FaLinux, color: '#FCC624' },
-        { name: 'CI/CD', icon: FaCogs, color: '#5B9BD5' },
-        { name: 'Jenkins', icon: DiJenkins, color: '#D24939' },
-        { name: 'SonarQube', icon: SiSonarqube, color: '#4E9BCD' },
+        { name: 'GitHub', icon: FaGithub, color: '#F05032' },
       ]
     },
     /* {
