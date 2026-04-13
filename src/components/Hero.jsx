@@ -188,7 +188,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="absolute right-0 top-0 h-full w-1/2 hidden md:flex md:items-center md:justify-center pt-16 px-4"
+        className="absolute right-0 top-0 h-full w-1/2 hidden lg:flex lg:items-center lg:justify-center pt-16 px-4"
       >
         <img 
           src="/assets/BG.png" 
@@ -197,7 +197,7 @@ const Hero = () => {
         />
       </motion.div>
 
-      <div className="relative w-full md:w-1/2 px-8 sm:px-12 lg:px-20 py-20">
+      <div className="relative w-full lg:w-1/2 px-6 sm:px-12 lg:px-20 py-20">
           {/* Left Side - Text Content */}
           <div className="text-left">
           {/* Animated Name */}
@@ -208,7 +208,7 @@ const Hero = () => {
             className="mb-6"
           >
             <span className="text-accent text-sm md:text-base font-semibold uppercase tracking-widest mb-3 block">{t('hero.greeting')}</span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-1 whitespace-nowrap">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-1 break-words">
               {t('hero.iAm')} <span className="text-primary">{t('hero.name')}</span>
             </h1>
           </motion.div>

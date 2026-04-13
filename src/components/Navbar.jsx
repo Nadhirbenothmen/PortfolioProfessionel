@@ -100,11 +100,11 @@ const Navbar = () => {
             }}
             className="hover:scale-105 transition-transform duration-300 flex-shrink-0"
           >
-            <Logo className="w-40 h-12" />
+            <Logo className="w-28 h-10 sm:w-36 sm:h-11 lg:w-40 lg:h-12" />
           </Link>
 
           {/* Desktop Menu - Center */}
-          <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          <div className="hidden lg:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {navLinks.map((link) => (
               link.scroll ? (
                 <button
@@ -144,7 +144,7 @@ const Navbar = () => {
           </div>
           
           {/* Right Side - Theme Toggle and Language Switcher */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-3">
             <LanguageSwitcher />
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -158,7 +158,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-3">
+          <div className="lg:hidden flex items-center gap-2 sm:gap-3">
             <LanguageSwitcher />
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -186,7 +186,7 @@ const Navbar = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-gray-100 dark:border-gray-800 shadow-lg"
+          className="lg:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg border-t border-gray-100 dark:border-gray-800 shadow-lg"
         >
           <div className="px-4 pt-2 pb-4 space-y-2">
             {navLinks.map((link) => (
