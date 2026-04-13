@@ -1,10 +1,13 @@
-# CV Placeholder
+# CV Files (FR/EN)
 
-Pour ajouter votre CV:
+Ce projet utilise deux CV selon la langue sélectionnée:
 
-1. Créez ou exportez votre CV en PDF
-2. Nommez-le `cv.pdf`
-3. Placez-le dans le dossier `public/` de votre projet
-4. Le bouton "Download CV" téléchargera automatiquement votre CV
+1. Version française: `NadhirCV_data.pdf`
+2. Version anglaise: `NadhirCV_data_EN.pdf`
 
-Le fichier sera accessible à l'URL: `/cv.pdf`
+Placez ces deux fichiers dans le dossier `public/`.
+
+Comportement automatique:
+
+- Si la langue du site est `fr`, le bouton télécharge `NadhirCV_data.pdf`
+- Sinon, il télécharge `NadhirCV_data_EN.pdf`

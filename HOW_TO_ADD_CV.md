@@ -1,24 +1,27 @@
-# 📄 Comment Ajouter Votre CV
+# 📄 Comment Ajouter Vos CV (FR/EN)
 
-## Option 1: Ajouter votre propre CV PDF
+## Option 1: Ajouter vos deux CV PDF
 
-1. **Créez ou exportez votre CV en format PDF**
-   - Utilisez Word, Google Docs, Canva, ou un autre outil
-   - Exportez en PDF
+1. **Créez ou exportez vos CV en format PDF**
+   - Version française
+   - Version anglaise
 
-2. **Renommez le fichier**
-   - Nommez-le exactement: `cv.pdf`
+2. **Renommez les fichiers exactement comme suit**
+   - `NadhirCV_data.pdf` (FR)
+   - `NadhirCV_data_EN.pdf` (EN)
 
-3. **Placez-le dans le dossier public**
-   ```
+3. **Placez-les dans le dossier public**
+
+   ```text
    PORTFOLIO_PROF/
    └── public/
-       └── cv.pdf  ← Placez votre CV ici
+       ├── NadhirCV_data.pdf      ← CV Français
+       └── NadhirCV_data_EN.pdf   ← CV Anglais
    ```
 
-4. **Le bouton fonctionnera automatiquement**
-   - Le bouton "Download CV" téléchargera votre CV
-   - Avec le nom: "Nadhir_Ben_Othmen_CV.pdf"
+4. **Le bouton fonctionnera automatiquement selon la langue**
+   - Langue `fr` → télécharge `NadhirCV_data.pdf`
+   - Langue `en` → télécharge `NadhirCV_data_EN.pdf`
 
 ## Option 2: Utiliser un CV en ligne
 
@@ -27,9 +30,10 @@ Si vous préférez lier vers votre CV hébergé ailleurs (Google Drive, Dropbox,
 1. **Uploadez votre CV sur un service cloud**
 2. **Obtenez un lien de téléchargement direct**
 3. **Modifiez le fichier Hero.jsx**
-   - Ligne ~125: Remplacez `href="/cv.pdf"` par votre lien
+   - Remplacez les chemins FR/EN dans `cvPath` par vos liens
 
 Exemple:
+
 ```jsx
 href="https://drive.google.com/uc?export=download&id=VOTRE_ID"
 ```
@@ -37,10 +41,11 @@ href="https://drive.google.com/uc?export=download&id=VOTRE_ID"
 ## Option 3: Créer un CV temporaire
 
 Pour tester, vous pouvez:
+
 1. Créer un document texte simple
 2. Le convertir en PDF
-3. Le placer dans `public/cv.pdf`
+3. Le placer dans `public/` avec les deux noms FR/EN
 
 ---
 
-**Note**: Le fichier doit être dans `public/` pour être accessible publiquement.
+**Note**: Les fichiers doivent être dans `public/` pour être accessibles publiquement.

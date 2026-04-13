@@ -7,7 +7,7 @@ const Hero = () => {
   const { t, i18n } = useTranslation()
   
   // Get CV path based on current language
-  const cvPath = i18n.language === 'fr' ? '/Nadhir-BENOTHMEN-CV-FR.pdf' : '/Nadhir-BENOTHMEN-CV-EN.pdf'
+  const cvPath = i18n.language === 'fr' ? '/NadhirCV_data.pdf' : '/NadhirCV_data_EN.pdf'
   const cvFileName = i18n.language === 'fr' ? 'Nadhir_BEN_OTHMEN_CV-FR.pdf' : 'Nadhir_BEN_OTHMEN_CV-EN.pdf'
   
   // Floating icons data
