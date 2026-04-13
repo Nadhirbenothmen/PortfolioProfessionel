@@ -188,7 +188,7 @@ const Hero = () => {
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="absolute right-0 top-0 h-full w-1/2 hidden lg:flex lg:items-center lg:justify-center pt-16 px-4"
+        className="absolute right-0 bottom-0 lg:top-0 lg:bottom-auto h-[62%] sm:h-[68%] lg:h-full w-[54%] sm:w-[50%] lg:w-1/2 flex items-end lg:items-center justify-center pt-16 px-1 sm:px-2 lg:px-4 pointer-events-none"
       >
         <img 
           src="/assets/BG.png" 
@@ -197,7 +197,7 @@ const Hero = () => {
         />
       </motion.div>
 
-      <div className="relative w-full lg:w-1/2 px-6 sm:px-12 lg:px-20 py-20">
+      <div className="relative w-full lg:w-1/2 px-6 sm:px-12 lg:px-20 py-20 pr-[44%] sm:pr-[40%] lg:pr-20">
           {/* Left Side - Text Content */}
           <div className="text-left">
           {/* Animated Name */}
@@ -297,6 +297,7 @@ const Hero = () => {
               {t('hero.downloadCV')}
             </motion.a>
           </motion.div>
+
           </div>
       </div>
 
